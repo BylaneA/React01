@@ -1,1 +1,41 @@
-// Ici on code notre App
+//React
+import React from 'react';
+import { render } from 'react-dom';
+//CSS
+import './style/css/bootstrap.min.css';
+import './index.css';
+//JS file markdown
+import { sampleText } from './sampleText';
+
+class App extends React.Component {
+
+	state = {
+		text: sampleText
+	};
+
+	render(){
+		return (
+			<div className="container">
+				<div className="row">
+
+					<div className="col-sm-6"> 
+						<textarea value={this.state.text} rows="35" className="form-control">
+						</textarea>
+					</div>
+
+					<div className="col-sm-6"> 
+						<div>
+							{this.state.text}
+						</div>
+					</div>
+
+				</div>
+			</div>
+		)
+	}
+}
+
+render(
+	<App />,
+	document.getElementById('root')
+);
