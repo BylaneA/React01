@@ -29,7 +29,7 @@ class App extends React.Component{
 						<Message pseudo={this.props.params.pseudo} />
 
 					</div>
-					<Formulaire addMessage={this.addMessage} />
+					<Formulaire addMessage={this.addMessage} pseudo={this.props.params.pseudo} length="140" />
 				</div>			
 			</div>
 		)
